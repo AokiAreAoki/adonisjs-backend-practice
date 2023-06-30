@@ -1,0 +1,69 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"@typescript-eslint",
+		"prettier"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"rules": {
+		// "prettier/prettier": "warn",
+		"indent": [
+			"warn",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"comma-spacing": "warn",
+		// "trailing-comma": [
+		// 	"warn",
+		// 	{
+		// 		"arrays": "always-multiline",
+		// 		"objects": "always-multiline",
+		// 		"functions": "always-multiline",
+		// 		"imports": "always-multiline"
+		// 	}
+		// ],
+		"space-infix-ops": "warn",
+		"arrow-spacing": "warn",
+		"object-curly-spacing": [
+			"warn",
+			"always"
+		],
+		"array-bracket-spacing": [
+			"warn",
+			"always"
+		],
+		"no-extra-semi": "warn",
+		// "import/extensions": [
+		// 	"warn",
+		// 	"ignorePackages"
+		// ],
+		"import/no-unresolved": "off",
+		"no-multiple-empty-lines": [
+			"warn",
+			{
+				"max": 1,
+				"maxEOF": 0
+			}
+		],
+		"function-paren-newline": [
+			"warn",
+			"multiline"
+		],
+		"array-element-newline": [
+			"warn",
+			"consistent"
+		],
+		"object-property-newline": [
+			"warn",
+			{
+				"allowAllPropertiesOnSameLine": true
+			}
+		]
+	}
+}
