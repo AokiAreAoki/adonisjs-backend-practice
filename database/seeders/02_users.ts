@@ -42,5 +42,23 @@ export default class extends BaseSeeder {
 
 			roleId: Roles.STUDENT,
 		})))
+
+		const teachers = [
+			'Lyudmila Sergeevna',
+		].map( fullName => {
+			const [ name, surname ] = fullName.split( /\s+/ )
+			return { name, surname }
+		})
+
+		await UserModel.createMany( teachers.map( student => ({
+			name: student.name,
+			surname: student.surname,
+
+			email: `${student.name}.${student.surname}@gmail.com`,
+			login: student.name.toLowerCase(),
+			password: student.surname.toLowerCase(),
+
+			roleId: Roles.TEACHER,
+		})))
 	}
 }
